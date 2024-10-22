@@ -1,0 +1,16 @@
+.node {
+    width: auto;
+    height: 36px;
+    padding: 0 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border: 1px solid #1b67b3;
+    border-radius: 4px;
+    position: relative;
+    cursor: pointer;
+    background-color: #9cd3f7;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
