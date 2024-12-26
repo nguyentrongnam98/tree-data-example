@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect, useState } from 'react';
 import { PlusCircleOutlined } from '@ant-design/icons';
 
@@ -8,7 +9,7 @@ import ChildNode from './ChildrenNode';
 
 const TreeView: React.FC = () => {
   const [data, setData] = useState<DataNode[]>([]);
-  const onSelect = (selectedKeys: React.Key[], info: any) => {
+  const onSelect = (selectedKeys: React.Key[], info: unknown) => {
     console.log('selected', selectedKeys, info);
   };
 
@@ -91,8 +92,7 @@ const TreeView: React.FC = () => {
       title: (
         <PlusCircleOutlined
           style={{ fontSize: '24px' }}
-          onClick={handleAddNode}
-        />
+          onClick={handleAddNode} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}        />
       ),
       key: 'add-node',
     },
@@ -100,7 +100,7 @@ const TreeView: React.FC = () => {
 
   useEffect(() => {
     setData(treeData);
-  }, []);
+  }, [treeData]);
 
   return (
     <div>
