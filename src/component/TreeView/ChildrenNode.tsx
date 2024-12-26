@@ -13,10 +13,10 @@ const ChildNode: React.FC<ChildNodeProps> = (props) => {
 
   return (
     <div className='node'>
-      <CarryOutOutlined />
+      <CarryOutOutlined onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined} />
       <span>{name}</span> |<span>{type}</span> |
       <span>
-        <DeleteOutlined />
+        <DeleteOutlined onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined} />
       </span>
     </div>
   );

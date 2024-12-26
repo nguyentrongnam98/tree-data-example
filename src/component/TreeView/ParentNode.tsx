@@ -20,15 +20,15 @@ const ParentNode: React.FC<ParentNodeProps> = (props) => {
 
   return (
     <div className='node'>
-      <CarryOutOutlined />
+      <CarryOutOutlined onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined} />
       <span>{name}</span> |<span>{type}</span> |
       <Tag color='orange'>{subtype}</Tag>|
       <span>
-        <PlusCircleFilled onClick={() => onAddChild()} />
+        <PlusCircleFilled onClick={() => onAddChild()} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined} />
       </span>{' '}
       |
       <span>
-        <DeleteOutlined onClick={() => onDelete()} />
+        <DeleteOutlined onClick={() => onDelete()} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined} />
       </span>
     </div>
   );
